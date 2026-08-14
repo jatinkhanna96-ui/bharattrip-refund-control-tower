@@ -1,2 +1,2 @@
-# bharattrip-refund-control-tower
-Refund application status
+pip install -r requirements.txt
+python -m streamlit run app.py
