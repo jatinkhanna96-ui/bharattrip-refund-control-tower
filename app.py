@@ -283,7 +283,7 @@ elif page == 'Message Intake':
         route_match=re.search(r'([A-Z]{3})[-–]([A-Z]{3})',message.upper())
         refund_id=ids[0].replace(' ','-') if ids else 'Not provided'
         route=f'{route_match.group(1)}-{route_match.group(2)}' if route_match else 'Not provided'
-        urgency='HIGH' if any(x in message.lower() for x in ['urgent','2 hafte','haven\'t received','not received','never received']) else 'MEDIUM'
+        urgency='HIGH' if any(x in message.lower() for x in ["urgent","2 hafte","haven't received","not received","never received"]) else 'MEDIUM'
         st.markdown('#### AI extraction')
         c1,c2,c3=st.columns(3)
         c1.metric('Refund ID',refund_id)
